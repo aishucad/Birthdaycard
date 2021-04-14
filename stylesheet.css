@@ -1,0 +1,108 @@
+body{
+    margin:10px;
+    padding:0;
+    background:rgb(177, 224, 243,0.5);
+    font-size: 20px;
+}
+.bday{
+    margin-top:80px;
+    text-align: center;
+    background:linear-gradient(180deg,#07e207 23%,#1d078f 70%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    cursor: pointer;
+    font-size:80px;
+    font-family: bday;    
+}
+.name{
+    padding-right:100px;
+    margin-left: 318px;
+    margin-top:60px;
+    text-align: center;
+    background:linear-gradient(180deg,#07e207 23%,#1d078f 70%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    cursor: pointer;
+    font-size:170px;
+    font-family: bday;
+    display:inline-block;  
+}
+@font-face{
+font-family: bday;
+src:url(bday.ttf)
+}
+.section{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg)translateZ(-300px);
+    animation: animate 30s steps(1000,end) infinite;
+    /* margin-bottom: 200px; */
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg) translateZ(100px);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg)translateZ(100px) ;
+    }
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(300px);
+    border:5px solid rgb(9, 9, 49);
+}
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border:5px solid white;
+}
+.content{
+    margin-top: 5px;
+    color: black;
+    background-image: url(bg.jpg);
+    border-radius: 13px;
+}
+.heading{
+    padding-right:100px;
+    margin-left: 318px;
+    margin-top:0;
+    text-align: center;
+    background:linear-gradient(to right,rgb(199, 9, 9) ,rgb(82, 12, 173));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    cursor: pointer;
+    font-size:90px;
+    display:inline-block;  
+    font-family:Just;
+}
+#emoji{
+    font-size: 120px;
+}
+@font-face{
+    font-family:Just;
+    src: url(Just.ttf);
+}
+.paragraph{
+    text-indent: 25px;
+    padding: 10px 35px;
+    font-size: 21px;
+}
